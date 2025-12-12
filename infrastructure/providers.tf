@@ -8,7 +8,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "baho-backup-bucket "
+    bucket = "baho-backup-bucket"
     key    = "infrastructure-backup/terraform.tfstate"
     region = "us-west-2"
   }
