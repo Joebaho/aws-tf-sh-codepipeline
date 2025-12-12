@@ -1,6 +1,6 @@
 environment="prod"
 aws_region= "us-west-2"
-codestar_connection_arn= "arn:aws:codeconnections:us-west-2:546310954125:connection/f6cafb9c-ac59-4728-89f4-8e0d8603bd27"
+codestar_connection_arn= "arn:aws:codeconnections:us-west-2:546310954125:connection/7b4f5a79-9cbf-423a-9e7c-8a8423b7a084"
 github_repository= "Joebaho/aws-tf-sh-codepipeline"
 github_branch="main"
 codedeploy_deployment_group_name= "prod-web-dg"
