@@ -79,8 +79,8 @@ Make sure you have:
 2.**Run Deployment Script of the infrasructure first**
 
    ```bash
-   chmod +x deploy-infrastructure.sh
-   ./deploy-infrastructure.sh
+   chmod +x scripts/deploy-infrastructure.sh
+   ./scripts/deploy-infrastructure.sh
    ```
 
 The process will display following images:
@@ -142,8 +142,8 @@ Make some changes in the index.html file save andpush it to githhub. Look at the
 3.**Destroy pipeline (when done)**
 
   ```bash
-   chmod +x destroy-pipeline.sh
-   ./destroy-pipeline.sh
+   chmod +x scripts/destroy-pipeline.sh
+   ./scripts/destroy-pipeline.sh
   ```
 
 After typing or pasting the command you will get images
@@ -154,8 +154,8 @@ After typing or pasting the command you will get images
 4.**Destroy Infrastructure (when done)**
 
   ```bash
-   chmod +x destroy-infrastructure.sh
-   ./destroy-infrastructure.sh
+   chmod +x scripts/destroy-infrastructure.sh
+   ./scripts/destroy-infrastructure.sh
   ```
 
 After typing or pasting the command you will get images
