@@ -106,6 +106,11 @@ After copy the ELb dns in the output section you can go paste that in a new wind
 
 3.**Run Deployment Script of the pipeline**
 
+   ```bash
+   chmod +x scripts/deploy-pipeline.sh
+   ./scripts/deploy-pipeline.sh
+   ```
+
 The process will display following images:
 
 Terraform init: 
