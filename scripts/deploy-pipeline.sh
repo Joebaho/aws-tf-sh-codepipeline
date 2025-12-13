@@ -31,3 +31,5 @@ terraform apply tfplan
 echo "✅ Pipeline deployment complete!"
 echo "🔗 Pipeline URL: $(terraform output -raw pipeline_url)"
 echo "🎣 Webhook URL: $(terraform output -raw webhook_url)"
+echo "📱 CodeDeploy App: $(terraform output -raw codedeploy_app_name)"
+echo "🔧 Deployment Group: $(terraform output -raw codedeploy_deployment_group_name)"

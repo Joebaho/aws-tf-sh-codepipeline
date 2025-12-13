@@ -31,5 +31,3 @@ terraform apply tfplan
 # Output important information
 echo "✅ Infrastructure deployment complete!"
 echo "🌐 ALB DNS Name: $(terraform output -raw alb_dns_name)"
-echo "📱 CodeDeploy App: $(terraform output -raw codedeploy_app_name)"
-echo "🔧 Deployment Group: $(terraform output -raw codedeploy_deployment_group_name)"
