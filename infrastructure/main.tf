@@ -166,7 +166,7 @@ resource "aws_launch_template" "web_server" {
 
   user_data = base64encode(templatefile("${path.module}/user_data.sh", {
     environment = var.environment
-    aws_region  = var.aws_region
+    REGION  = var.aws_region
   }))
 
   tag_specifications {
