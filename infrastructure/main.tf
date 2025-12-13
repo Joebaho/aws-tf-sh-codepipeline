@@ -76,7 +76,7 @@ resource "aws_lb" "web_alb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb_sg.id]
-  subnets           = aws_subnet.public[*].id
+  subnets            = aws_subnet.public[*].id
 
   tags = {
     Environment = var.environment
@@ -187,8 +187,8 @@ resource "aws_autoscaling_group" "web_asg" {
   name_prefix         = "${var.environment}-web-asg-"
   vpc_zone_identifier = aws_subnet.public[*].id
   desired_capacity    = var.desired_capacity
-  min_size           = var.min_size
-  max_size           = var.max_size
+  min_size            = var.min_size
+  max_size            = var.max_size
 
   launch_template {
     id      = aws_launch_template.web_server.id
