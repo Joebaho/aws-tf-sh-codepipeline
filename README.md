@@ -106,9 +106,18 @@ After copy the ELb dns in the output section you can go paste that in a new wind
 
 ![Web Page](images/webpage2.png)
 
+Run this command to make the codedeploy to take effect after any change committed
+
+   ```bash
+   chmod +x application/scripts/*.sh
+   ./application/scripts/install_dependencies.sh
+   ./application/scripts/start_server.sh
+   ```
+
 3.**Run Deployment Script of the pipeline**
 
    ```bash
+   chmod +x application/scripts/*.sh
    chmod +x scripts/deploy-pipeline.sh
    ./scripts/deploy-pipeline.sh
    ```
@@ -128,19 +137,13 @@ Terraform apply:
 ![Terraform apply](images/apply2.png)
 
 Terraform output:
-![Terraform output](images/outputs2.png)
+![Terraform output](images/output2.png)
 
 Go in the console > Codepileline to see how the pipeline stages are running 
 
 ![CodePipeline1](images/CodePipeline1.png)
 
 ![CodePipeline2](images/CodePipeline2.png)
-
-![CodePipeline3](images/CodePipeline3.png)
-
-![CodePipeline4](images/CodePipeline4.png)
-
-![CodePipeline5](images/CodePipeline5.png)
 
 Make some changes in the index.html file save andpush it to githhub. Look at the codepipeline status. Then copy the ELb dns in the output section you can go paste that in a new window on the browser and the web page will display.
 
@@ -155,7 +158,7 @@ Make some changes in the index.html file save andpush it to githhub. Look at the
 
 After typing or pasting the command you will get images
 
-![Terraformy destroy pipeline 1](images/destroy1.png)
+![Terraform destroy pipeline 1](images/destroy1.png)
 ![Terraform destroy pipeline 2](images/destroy2.png)
 
 4.**Destroy Infrastructure (when done)**
