@@ -140,7 +140,7 @@ resource "aws_iam_role" "ec2_codedeploy_role" {
 
 resource "aws_iam_role_policy_attachment" "ec2_codedeploy" {
   role       = aws_iam_role.ec2_codedeploy_role.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforCodeDeploy"
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforAWSCodeDeploy"
 }
 
 resource "aws_iam_instance_profile" "ec2_codedeploy" {
@@ -166,7 +166,7 @@ resource "aws_launch_template" "web_server" {
 
   user_data = base64encode(templatefile("${path.module}/user_data.sh", {
     environment = var.environment
-    REGION  = var.aws_region
+    REGION      = var.aws_region
   }))
 
   tag_specifications {
