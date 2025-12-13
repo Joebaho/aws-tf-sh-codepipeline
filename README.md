@@ -18,7 +18,6 @@ This project demonstrates first how to **provision infrastructure on AWS using T
     ├── prod.tfvars           # All pro environment variables value
 ├── images/                   # All images that will be display
 ├── infrastructure/
-    ├── codedeploy.tf         # Codedeploy configuration 
     ├── main.tf               # Alb, Sg, LT ... configuration resources 
     ├── providers.tf          # AWS provider configuration
     ├── variables.tf          # Define all input and changable arguments
@@ -27,6 +26,7 @@ This project demonstrates first how to **provision infrastructure on AWS using T
     ├── outputs.tf            # List of all output that can be use 
     ├── user_data.sh          # Initialize and install web page
 ├── pipeline/
+    ├── codedeploy.tf         # Codedeploy configuration 
     ├── iam_roles.tf          # codebuild & codepipeline role resources
     ├── main.tf               # codebuild & codepipeline configuration
     ├── providers.tf          # AWS provider configuration
@@ -98,11 +98,13 @@ Terraform apply:
 ![Terraform apply](images/apply1.png)
 
 Terraform output:
-![Terraform output](images/outputs1.png)
+![Terraform output](images/output1.png)
 
 After copy the ELb dns in the output section you can go paste that in a new window on the browser and the web page will display.
 
-![Web Page](images/webpage.png)
+![Web Page](images/webpage1.png)
+
+![Web Page](images/webpage2.png)
 
 3.**Run Deployment Script of the pipeline**
 
