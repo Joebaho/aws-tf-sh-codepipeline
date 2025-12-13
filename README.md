@@ -141,9 +141,9 @@ Terraform output:
 
 Go in the console > Codepileline to see how the pipeline stages are running 
 
-![CodePipeline1](images/CodePipeline1.png)
+![CodePipeline1](images/Codepipeline1.png)
 
-![CodePipeline2](images/CodePipeline2.png)
+![CodePipeline2](images/Codepipeline2.png)
 
 Make some changes in the index.html file save andpush it to githhub. Look at the codepipeline status. Then copy the ELb dns in the output section you can go paste that in a new window on the browser and the web page will display.
 
