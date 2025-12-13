@@ -1,7 +1,4 @@
-# Data sources to reference existing infrastructure
-data "aws_codedeploy_app" "web_app" {
-  name = "${var.environment}-web-app"
-}
+
 # CodeBuild project for application deployment
 resource "aws_codebuild_project" "app_build" {
   name          = "${var.environment}-app-build"
@@ -98,7 +95,7 @@ resource "aws_codepipeline" "app_pipeline" {
       input_artifacts = ["build_output"]
 
       configuration = {
-        ApplicationName     = data.aws_codedeploy_app.web_app.name
+        ApplicationName     = aws_codedeploy_app.web_app.name
         DeploymentGroupName = var.codedeploy_deployment_group_name
       }
     }

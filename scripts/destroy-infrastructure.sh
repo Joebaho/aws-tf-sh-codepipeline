@@ -17,6 +17,6 @@ if [ "$confirm" != "yes" ]; then
     exit 1
 fi
 
-terraform destroy -auto-approve -var="../environments/$ENVIRONMENT.tfvars"
+terraform destroy -auto-approve -var-file="../environments/$ENVIRONMENT.tfvars"
 
 echo "✅ Infrastructure destroyed"
