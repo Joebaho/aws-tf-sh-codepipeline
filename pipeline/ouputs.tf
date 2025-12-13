@@ -21,3 +21,13 @@ output "artifact_bucket_name" {
   description = "Pipeline artifact bucket name"
   value       = aws_s3_bucket.pipeline_artifacts.bucket
 }
+
+output "codedeploy_app_name" {
+  description = "CodeDeploy Application Name"
+  value       = aws_codedeploy_app.web_app.name
+}
+
+output "codedeploy_deployment_group_name" {
+  description = "CodeDeploy Deployment Group Name"
+  value       = aws_codedeploy_deployment_group.web_dg.deployment_group_name
+}
